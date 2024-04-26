@@ -44,18 +44,18 @@ root = tk.Tk()
 root.title("Аналоговые часы")
 
 # Создание холста
-canvas_width = 400
+canvas_width = 400 
 canvas_height = 400
 canvas = tk.Canvas(root, width=canvas_width, height=canvas_height, bg="white")
-canvas.pack()
+canvas.pack() # Этот метод упаковывает холст в родительское окно, чтобы он был видимым на графическом интерфейсе.
 
 # Определение центра часов
 center_x = canvas_width / 2
 center_y = canvas_height / 2
-clock_radius = min(canvas_width, canvas_height) / 2 - 10
+clock_radius = min(canvas_width, canvas_height) / 2 - 10 # Для того, чтобы определить радиус окружности, вписанной в холст, так чтобы часы были целиком видны внутри этой окружности.
 
 # Запуск функции обновления часов
-update_clock()
+update_clock() 
 
 # Запуск основного цикла обработки событий
 root.mainloop()
